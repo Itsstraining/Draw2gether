@@ -1,0 +1,78 @@
+.container{
+    display: flex;
+    height: 100%;
+}
+
+.sign-in{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up{
+    width: 50%;
+    height: 100%;
+    background-color: #426ef0;
+}
+
+.logo{
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 25%;
+    text-align: center;
+}
+
+.logo a{
+    color: white;
+}
+.sign-up-button{
+    margin: 5% auto;
+}
+
+.sign-up-button button{
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Maven Pro', sans-serif;
+    color: white;
+    background-color: #426ef0;
+    padding: 10px 15px;
+    border: 3px solid #fff;
+    border-radius: 50px;
+}
+
+.sign-in-frame{
+    width: 65%;
+    height: 80%;
+    background-color: #F1f1f1;
+    border-radius: 50px;
+}
+
+.sign-in-methods{
+    border-radius: 50px 50px 0 0;
+}
+
+.sign-in-methods-content{
+    width: 90%;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.methods{
+    display: flex;
+    flex-direction: row;
+}
+
+.sign-in-methods-content p {
+    font-size: 30px;
+}
+
+.methods img{
+    width: 50px;
+    height: 50px;
+    margin: auto 10px;
+}
