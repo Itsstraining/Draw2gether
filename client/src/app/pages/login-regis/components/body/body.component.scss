@@ -1,0 +1,130 @@
+.container{
+    display: flex;
+    height: 100%;
+}
+
+.sign-in{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up{
+    width: 50%;
+    height: 100%;
+    background-color: #426ef0;
+}
+
+.logo{
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 25%;
+    text-align: center;
+}
+
+.logo a{
+    color: white;
+}
+.sign-up-button{
+    margin: 5% auto;
+}
+
+.sign-up-button button{
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    background-color: #426ef0;
+    padding: 10px 15px;
+    border: 3px solid #fff;
+    border-radius: 50px;
+}
+
+.sign-in-frame{
+    width: 65%;
+    height: 80%;
+    background-color: #F1f1f1;
+    border-radius: 50px;
+}
+
+.sign-in-methods{
+    border-radius: 50px 50px 0 0;
+}
+
+.sign-in-methods-content{
+    width: 90%;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.methods{
+    display: flex;
+    flex-direction: row;
+}
+
+.sign-in-methods-content p {
+    font-size: 30px;
+}
+
+.methods img{
+    width: 50px;
+    height: 50px;
+    margin: auto 10px;
+}
+
+.main{
+    width: 70%;
+    margin: 0 13%;
+}
+
+
+.input-username, .input-password{
+    margin-top: 3%;
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    border-radius: 50px;
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    padding: 0 0 0 7%;
+}
+
+.input-username::placeholder{
+    color: rgb(217, 217, 217);
+}
+
+.input-username, .input-password:focus {
+    outline:none!important;
+}
+
+.input-password::placeholder{
+    color: rgb(217, 217, 217);
+}
+
+.password{
+    margin-top: 7%;
+}
+
+
+.input-button{
+    width: 23.3rem;
+    border: none;
+    background-color: #426ef0;
+    height: 3rem;
+    border-radius: 50px;
+    margin-top: 5%;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.sign-in-frame-footer{
+    margin-top: 20%;
+    display: flex;
+    justify-content: space-between;
+}
