@@ -1,0 +1,121 @@
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #ffc727;
+    display: flex;
+
+}
+
+.title{
+    width: 25%;
+    height: 100%;
+    margin: auto 0;
+    padding-left: 3%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.title p{
+    font-weight: bold;
+}
+
+
+.logo{
+    width: 50%;
+    display: flex;
+}
+
+.logo img{
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.right-side-navbar{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    margin: auto 0;
+    flex-direction: row;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-evenly;
+}
+
+
+.project-options{
+    width: 50px;
+    height: 50px;
+    margin: auto 0;
+    display: flex;
+}
+
+.project-options .material-symbols-outlined{
+    margin: auto auto;
+    font-size: xx-large;
+    font-weight: 410;
+    color: white;
+}
+
+
+.share-button{
+    width: 25%;
+    height: 50%;
+    background-color: white;
+    display: flex;
+    margin: auto 0;
+    border-radius: 8px;
+    background-color: #426ef0;
+    color: white;
+    padding: auto 5px;
+}
+
+.avatar{
+    width: auto;
+    height: 100%;
+    display: flex;
+}
+
+
+
+.avatar-content{
+    width: auto;
+    height: 65%;
+    margin: auto 0;
+}
+
+.share-button .material-symbols-outlined{
+    width: 30%;
+    margin: auto 0;
+    font-weight: lighter;
+    margin-left: 12%;
+
+}
+
+.share-button .share{
+    width: 70%;
+    margin: auto 0;
+}
+
+.share-button:hover{
+    background-color: #235aff;
+    font-weight: bold;
+}
+
+
+.project-options:hover{
+    background-color: #ffbb00;
+    border-radius: 100px;
+}
+
+.avatar:hover{
+    width: 10%;
+    height: 107%;
+}
