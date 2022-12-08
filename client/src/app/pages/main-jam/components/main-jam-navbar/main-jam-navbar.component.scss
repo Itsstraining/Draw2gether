@@ -1,3 +1,9 @@
+
+p{
+    margin: 0;
+}
+
+
 .container{
     width: 100%;
     height: 100%;
@@ -18,6 +24,7 @@
 
 .title p{
     font-weight: bold;
+    margin: auto 0;
 }
 
 
@@ -51,8 +58,8 @@
 
 
 .project-options{
-    width: 50px;
-    height: 50px;
+    width: 2.5rem;
+    height: 2.5rem;
     margin: auto 0;
     display: flex;
 }
@@ -66,15 +73,17 @@
 
 
 .share-button{
-    width: 25%;
-    height: 50%;
+    height: 2rem;
     background-color: white;
     display: flex;
     margin: auto 0;
     border-radius: 8px;
     background-color: #426ef0;
     color: white;
-    padding: auto 5px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .avatar{
@@ -84,7 +93,6 @@
 }
 
 
-
 .avatar-content{
     width: auto;
     height: 65%;
@@ -92,30 +100,36 @@
 }
 
 .share-button .material-symbols-outlined{
-    width: 30%;
-    margin: auto 0;
+    //width: 30%;
+    //margin: auto 0;
     font-weight: lighter;
-    margin-left: 12%;
+    //margin-right: 3px;
 
 }
 
-.share-button .share{
-    width: 70%;
-    margin: auto 0;
-}
+// .share-button p{
+//     // margin: auto 0;
+//     font-size: large;
+// }
 
 .share-button:hover{
     background-color: #235aff;
     font-weight: bold;
+    cursor: pointer;
 }
 
 
 .project-options:hover{
     background-color: #ffbb00;
     border-radius: 100px;
+    cursor: pointer;
 }
 
 .avatar:hover{
-    width: 10%;
-    height: 107%;
+    cursor: pointer;
 }
+
+.logo:hover{
+    cursor: pointer;
+}
+

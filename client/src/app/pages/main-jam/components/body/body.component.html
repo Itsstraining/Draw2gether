@@ -1,76 +1,25 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <div class="container">
-    <div class="top">
-        <div class="top-tools">
-            <div class="undo-redo">
-                <div class="tasks">
-                    <button>
-                        <span class="material-symbols-outlined">undo</span>
-                    </button>
-                    <button>
-                        <span class="material-symbols-outlined">redo</span>
-                    </button>
-                </div>
-            </div>
-            <div class="zoom-in-out">
-                <div class="tasks">
-                    <button class="zoom-in"> 
-                        <span class="material-symbols-outlined">zoom_in</span>
-                    </button>
-                    <button class="zoom-out"> 
-                        <span class="material-symbols-outlined">zoom_out</span>
-                    </button>
-                </div>
-            </div>
-            <button class="back-ground">
-                <span>Đặt nền</span>
-            </button>
-            <button  class="remove-all">
-               <span>Xóa khung</span>
-            </button>
-        </div>
-        <div class="page-navigation" >
-            <div class="content">
-                <button class="material-symbols-outlined" style="margin: auto 0; color: rgb(200, 200, 200);"> chevron_left </button>
-                <button class="page-overlay">
-                    <p class="page-number">1/2</p>
-                </button>
-                <button class="material-symbols-outlined" style="margin: auto 0; color: rgb(200, 200, 200);"> chevron_right </button>
-            </div>
-        </div>
-        <div class="top-right">
-        </div>
+    <div class="top-tools">
+        <app-top-tools></app-top-tools>
     </div>
-
+    
     <div class="middle">
         <div class="left-side">
             <div class="left-side-tools">
-                <button>
-                    <i class="fi fi-rr-pencil"></i>
-                </button>
-              
-                <button>
-                    <i class="fi fi-rr-broom"></i>
-                </button>
-
-                <button>
-                    <i class="fi fi-rr-cursor"></i>
-                </button>
-
-                <button>
-                    <i class="fi fi-rr-text"></i>
-                </button>
-
-                <button>
-                    <i class="fi fi-rr-picture"></i>
-                </button>
+                <div *ngFor="let ele of leftSideList; let i = index">
+                    <button [class.activeTools]="selectedIndex === i" class="tool" (click)="onFocus(i)">
+                        <i class={{ele}}></i>
+                    </button>
+                </div>
             </div>
         </div>
 
         <div class="front-side">
             <div class="paper">
-                
+
             </div>
         </div>
 

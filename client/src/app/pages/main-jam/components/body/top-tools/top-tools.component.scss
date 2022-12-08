@@ -1,10 +1,5 @@
 .container{
     width: 100%;
-    height: 100%;
-}
-
-.top{
-    width: 100%;
     height: 8%;
     border-bottom: solid 1px rgb(200, 200, 200);
     border-top: solid 1px rgb(200, 200, 200);
@@ -13,11 +8,21 @@
 }
 
 
-// .top-tools{
-//     display: flex;
-//     width: 25%;
-//     height: auto;
-// }
+.top{
+    width: 100%;
+    height: 8%;
+    // border-bottom: solid 1px rgb(200, 200, 200);
+    border-top: solid 1px rgb(200, 200, 200);
+    display: flex;
+
+}
+
+
+.top-tools{
+    display: flex;
+    width: 25%;
+    height: auto;
+}
 
 .page-navigation{
     width: 20%;
@@ -43,7 +48,7 @@
 }
 
 .page-number{
-    margin: 10% 0;
+    margin: auto 0;
     text-align: center;
     font-size: medium;
     font-weight: bold;
@@ -169,86 +174,14 @@
     cursor: pointer;
 }
 
-
-
-.middle{
-    width: 100%;
-    height: 92%;
-    background-color: rgb(234, 234, 234);
-    display: flex;
-    margin: auto 0;
+.activeBackground{
+    .choice{
+        background-color: white;
+    }
+    img{
+        border-color: aqua;
+    }
 }
-
-.left-side{
-    width: 10%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.front-side{
-    width: 80%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto 0;
-}
-
-
-.right-side{
-    width: 10%;
-    height: 100%;
-    display: flex;
-
-}
-
-
-.paper{
-    width: 97%;
-    height: 95%;
-    background-color: white;
-    border: 1px solid rgb(200, 200, 200);
-}
-
-.left-side-tools{
-    margin-left: 25%;
-    background-color:white;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 1rem;
-    align-items: center;
-}
-
-
-.tool{
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50px;
-    border: none;
-    margin: 5px;
-    background-color: white;
-}
-
-.tool i{
-    font-size: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: block !important;
-}
-
-
-.tool:hover{
-    background-color: rgb(210, 210, 210);
-    cursor: pointer;
-}
-
-.activeTools{
-    background-color: #ffc727;
-}
-
 
 .back-ground:focus{
     background-color: rgb(210, 210, 210);
@@ -266,18 +199,20 @@
     border: 1px solid rgb(200, 200, 200);
 }
 
-.choice{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+// .choice{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 
 .choice:hover{
     background-color: white;
 }
 
+// .choice:focus{
+//     background-color: black;
+// }
+
 .choice img:hover{
     border-color: aqua;
 }
-
-

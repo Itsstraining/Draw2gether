@@ -63,14 +63,15 @@
     margin: 1.5rem auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    justify-items: center;
+    //justify-content: space-between;
 }
 
 .methods{
     width: 50%;
     display: flex;
-    flex-direction: row;
-    // column-gap: ;
+    justify-content: flex-end;
 }
 
 .sign-in-methods-content p {
@@ -168,6 +169,7 @@
 .sign-up-button button:hover{
     background-color: #1953ff;
     font-size: larger;
+    cursor: pointer;
 }
 
 
@@ -200,3 +202,13 @@
     }
     
 }
+
+
+.methods img:hover{
+    cursor: pointer;
+}
+
+.input-button:hover{
+    cursor: pointer;
+}
+

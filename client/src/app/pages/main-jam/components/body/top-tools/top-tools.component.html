@@ -1,0 +1,54 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+<div class="container">
+    <div class="top">
+        <div class="top-tools">
+            <div class="undo-redo">
+                <div class="tasks">
+                    <button>
+                        <span class="material-symbols-outlined">undo</span>
+                    </button>
+                    <button>
+                        <span class="material-symbols-outlined">redo</span>
+                    </button>
+                </div>
+            </div>
+            <div class="zoom-in-out">
+                <div class="tasks">
+                    <button class="zoom-in">
+                        <span class="material-symbols-outlined">zoom_in</span>
+                    </button>
+                    <button class="zoom-out">
+                        <span class="material-symbols-outlined">zoom_out</span>
+                    </button>
+                </div>
+            </div>
+            <button mat-button [matMenuTriggerFor]="menu" class="back-ground" >Đặt nền</button>
+            <mat-menu #menu="matMenu" class="menu-options">
+                <div *ngFor="let ele of background; let i = index">
+                    <button mat-menu-item class="choice" [class.activeBackground]="selectedBackgroundIndex===i" (click)="onFocus(i)">
+                        <img src={{ele}} alt="">
+                    </button>
+                </div>
+            </mat-menu>
+            <button class="remove-all">
+                <span>Xóa khung</span>
+            </button>
+        </div>
+        <div class="page-navigation">
+            <div class="content">
+                <button class="material-symbols-outlined" style="margin: auto 0; color: rgb(200, 200, 200);">
+                    chevron_left </button>
+                <button class="page-overlay">
+                    <p class="page-number">1/2</p>
+                </button>
+                <button class="material-symbols-outlined" style="margin: auto 0; color: rgb(200, 200, 200);">
+                    chevron_right </button>
+            </div>
+        </div>
+        <div class="top-right">
+        </div>
+    </div>
+</div>
