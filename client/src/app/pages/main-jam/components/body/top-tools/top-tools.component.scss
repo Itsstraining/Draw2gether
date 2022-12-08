@@ -1,0 +1,218 @@
+.container{
+    width: 100%;
+    height: 8%;
+    border-bottom: solid 1px rgb(200, 200, 200);
+    border-top: solid 1px rgb(200, 200, 200);
+    display: flex;
+
+}
+
+
+.top{
+    width: 100%;
+    height: 8%;
+    // border-bottom: solid 1px rgb(200, 200, 200);
+    border-top: solid 1px rgb(200, 200, 200);
+    display: flex;
+
+}
+
+
+.top-tools{
+    display: flex;
+    width: 25%;
+    height: auto;
+}
+
+.page-navigation{
+    width: 20%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.content{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.page-overlay{
+    width: 50%;
+    height: 80%;
+    border-radius: 8px;
+    border: 2px solid rgb(200, 200, 200);
+    margin: auto 0;
+    background-color: white;
+}
+
+.page-number{
+    margin: auto 0;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(146, 146, 146);
+}
+
+.content .material-symbols-outlined{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+.page-overlay:hover{
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+
+.content .material-symbols-outlined:hover{
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+
+
+
+.top-right{
+    width: 25%;
+    height: 100%;
+}
+
+
+.undo-redo{
+    width: 25%;
+    height: 50%;
+    margin: auto 0;
+    margin-left: 3%;
+    border-right: solid rgb(200, 200, 200) 1.3px;
+}
+
+.tasks{
+    width: 90%;
+    display: flex;
+
+    height: auto;
+}
+
+.tasks .material-symbols-outlined{
+    width: 100%;
+    height: auto;
+    font-weight: 450;
+    color: rgb(140, 140, 140);
+}
+
+.tasks button{
+    margin: auto 0;
+    width: 50%;
+    height: 30%;
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.tasks button:hover{
+    background-color: rgb(230, 230, 230);
+    span{
+        color: rgb(146, 146, 146);
+    }
+    cursor: pointer;
+}
+
+
+.zoom-in-out{
+    width: 25%;
+    height: 50%;
+    margin: auto 0;
+    margin-left: 2%;
+    border-right: solid rgb(200, 200, 200) 1.3px;
+}
+
+.zoom-in-out .zoom-in{
+    width: 50%;
+}
+
+.zoom-in-out .tasks{
+    width: 90%;
+    display: flex;
+
+    height: auto;
+}
+
+.back-ground, .remove-all{
+    width: 28%;
+    height: 50%;
+    margin: auto 0;
+    margin-left: 3%;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color:  rgb(140, 140, 140);
+    font-size: medium;
+    font-weight:bold;
+}
+
+.back-ground{
+    display: flex;
+    //justify-items: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.back-ground:hover{
+    background-color:  rgb(230, 230, 230);
+    color: rgb(146, 146, 146);
+    cursor: pointer;
+}
+
+.remove-all:hover{
+    background-color:  rgb(230, 230, 230);
+    color: rgb(146, 146, 146);
+    cursor: pointer;
+}
+
+.activeBackground{
+    .choice{
+        background-color: white;
+    }
+    img{
+        border-color: aqua;
+    }
+}
+
+.back-ground:focus{
+    background-color: rgb(210, 210, 210);
+}
+
+.remove-all:focus{
+    background-color: rgb(210, 210, 210);
+
+}
+
+
+.choice img{
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+// .choice{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.choice:hover{
+    background-color: white;
+}
+
+// .choice:focus{
+//     background-color: black;
+// }
+
+.choice img:hover{
+    border-color: aqua;
+}

@@ -15,18 +15,23 @@
     width: 50%;
     height: 100%;
     background-color: #426ef0;
+    display: flex;
+    justify-content: center;
 }
 
 .logo{
-    display: block;
-    width: auto;
-    height: auto;
-    margin: 25%;
-    text-align: center;
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    margin: auto auto;
+    justify-content: center;
 }
 
-.logo a{
+.logo p{
     color: white;
+    font-size: medium;
+    text-align: center;
 }
 .sign-up-button{
     margin: 5% auto;
@@ -58,12 +63,15 @@
     margin: 1.5rem auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    justify-items: center;
+    //justify-content: space-between;
 }
 
 .methods{
+    width: 50%;
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .sign-in-methods-content p {
@@ -112,7 +120,7 @@
 
 
 .input-button{
-    width: 23.3rem;
+    width: 107%;
     border: none;
     background-color: #426ef0;
     height: 3rem;
@@ -124,7 +132,83 @@
 }
 
 .sign-in-frame-footer{
-    margin-top: 20%;
+    width: auto;
+    height: 20px;
+    margin-top: 25%;
     display: flex;
     justify-content: space-between;
+    color: rgb(149, 149, 149);
+    font-weight: bold;
+    font-size: medium;
 }
+
+
+.input-button:hover{
+    background-color: #1953ff;
+    font-size: larger;
+
+}
+
+
+.forget-password {
+    color: rgb(149, 149, 149);
+    text-decoration: none;
+    
+}
+
+.forget-password:hover{
+    color: rgb(100, 100, 100);
+    font-size: large;
+}
+
+
+.sign-up a:hover{
+    text-decoration: underline 1px !important;
+}
+
+.sign-up-button button:hover{
+    background-color: #1953ff;
+    font-size: larger;
+    cursor: pointer;
+}
+
+
+.methods img:hover{
+    //background-color: #1953ff;
+    border-radius: 50%;
+    box-shadow: #cdcdcd 2px 0px;
+}
+
+
+@media screen and (max-width: 1300px){
+    .sign-in-methods-content{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sign-in{
+        width: 100%;
+    }
+    
+    .sign-up{
+        width: 100%;
+    }
+    
+}
+
+
+.methods img:hover{
+    cursor: pointer;
+}
+
+.input-button:hover{
+    cursor: pointer;
+}
+
