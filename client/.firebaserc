@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "draw2gether-c747b": {
+      "hosting": {
+        "client": [
+          "draw2gether-c747b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "draw2gether-c747b"
+  }
+}
