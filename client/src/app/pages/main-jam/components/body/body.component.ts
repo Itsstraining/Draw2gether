@@ -1,5 +1,11 @@
 import { NavbarComponent } from './../../../../components/navbar/navbar.component';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AuthState } from 'src/states/auth.state';
+import { Observable } from 'rxjs';
+import { idToken } from '@angular/fire/auth';
+import { AuthActions } from 'src/actions/auth.action';
+
 
 @Component({
   selector: 'app-body',
@@ -8,10 +14,20 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  idToken$!: Observable<string>;
+  constructor(private store: Store <{auth: AuthState}>) { 
+    this.idToken$ = this.store.select((store) => store.auth.idToken);
+    
   }
+
+  
+  ngOnInit(): void {
+    this.idToken$.subscribe((idToken) => {
+      //console.log(idToken)
+   
+    })
+  }
+ 
 
   selectedIndex =  2;
   selectedBackgroundIndex = 0;
@@ -45,6 +61,11 @@ export class BodyComponent implements OnInit {
     //   this.element.nativeElement.style.color = "red";
     // }
     this.selectedIndex = element;
+  }
+
+
+  logout(){
+    this.store.dispatch(AuthActions.logout());
   }
 
 }
