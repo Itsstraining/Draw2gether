@@ -19,11 +19,18 @@
   justify-content: space-between;
 }
 
+.top-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .top-right {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .home-top-option {
   margin: auto 20px;
 }
@@ -48,10 +55,6 @@ p {
   border: none;
   margin-top: 15px;
   font-size: 15px;
-}
-
-.bottom {
-
 }
 
 .floating-container {
