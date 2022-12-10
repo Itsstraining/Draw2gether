@@ -22,4 +22,5 @@ import{
 })
 export class AppComponent {
   title = 'client';
+  user = false;
 }

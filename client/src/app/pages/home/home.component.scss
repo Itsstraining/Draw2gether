@@ -1,9 +1,100 @@
-#header{
-    width: 100%;
-    height: 5%;
+.home-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-#body{
-    width: 100%;
-    height: 95%;
+.home-container-content {
+  width: 90%;
+  height: 100%;
+}
+
+//home page top options css
+.top {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.top-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home-top-option {
+  margin: auto 20px;
+}
+
+// home page botton css
+
+.bottom {
+  width: 100%;
+  height: 90%;
+}
+
+// home button and font
+p {
+  font-size: 15pt;
+}
+
+.filter-project-btn {
+  width: 13rem;
+  height: 4rem;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.floating-container {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  margin: 35px 25px;
+}
+
+.floating-container:hover {
+  height: 300px;
+}
+
+.floating-container:hover .floating-button {
+  box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+  -webkit-transform: translatey(5px);
+  transform: translatey(5px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.floating-container .floating-button {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: #2cb3f0;
+    bottom: 0;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    line-height: 65px;
+    text-align: center;
+    font-size: 23px;
+    z-index: 100;
+    box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
