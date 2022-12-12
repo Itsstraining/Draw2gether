@@ -6,9 +6,18 @@ import { User, UserDocument } from 'src/Schemas/user.schema';
 
 @Injectable()
 export class UserService {
-  constructor(@InjectModel(User.name) private catModel: Model<UserDocument>) {}
-  create(createUserDto: User) {
-    return 'This action adds a new user';
+  constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
+  async create(createUserDto: User) {
+    // return 'This action adds a new user';
+    const user_indb = await this.userModel.findOne({email: createUserDto.email});
+    if(!user_indb){
+      const newUser = new this.userModel();
+      newUser.displayName = createUserDto.displayName;
+      newUser.email = createUserDto.email;
+      newUser.photoUrl = createUserDto.photoUrl;
+      return await newUser.save();
+    }
+    console.log(user_indb);
   }
 
   findAll() {
