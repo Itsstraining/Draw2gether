@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Jam } from './../../models/jam.model';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-jam-ject',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jam-ject.component.scss']
 })
 export class JamJectComponent implements OnInit {
+  @Input() jamInFor! : Jam
 
   constructor() { }
 
