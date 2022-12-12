@@ -1,3 +1,4 @@
+import { Req } from '@nestjs/common';
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { User } from 'src/Schemas/user.schema';
 import { UserService } from './user.service';
@@ -8,8 +9,9 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Post()
-  create(@Body() createUserDto: User) {
-    return this.userService.create(createUserDto);
+  create(@Req() req: any) {
+    console.log(req.user);
+    return this.userService.create(req.user);
   }
 
   @Get()

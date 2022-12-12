@@ -1,3 +1,4 @@
+import { HttpService } from './services/http.service';
 import { Component, HostBinding } from '@angular/core';
 import { from } from 'rxjs';
 
@@ -8,6 +9,9 @@ import{
   animate,
   transition,
 } from '@angular/animations'
+import { Auth, onAuthStateChanged } from '@angular/fire/auth';
+import { Store } from '@ngrx/store';
+import { AuthState } from 'src/states/auth.state';
 
 @Component({
   selector: 'app-root',
