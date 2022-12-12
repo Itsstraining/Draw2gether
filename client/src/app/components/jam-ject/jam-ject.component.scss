@@ -1,0 +1,54 @@
+.parent-project {
+  width: 19.875rem;
+  height: 13.313rem;
+  // background-color: cadetblue;
+  border: solid 1px rgb(200, 200, 200);
+  border-radius: 15px;
+}
+.header-project {
+  width: 100%;
+  height: 70%;
+  // background-color: red;
+  border-radius: 15px 15px 0 0 ;
+
+}
+.footer-project {
+  width: 100%;
+  height: 30%;
+  // background-color: black;
+  border-radius: 0 0 15px 15px;
+  border-top: solid 1px rgb(200, 200, 200);
+  justify-content: center;
+  display: flex;
+}
+.footer-content-project {
+  display: flex;
+  width: 90%;
+  // background-color: burlywood;
+  justify-content: space-between;
+}
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+p {
+  margin: 0;
+}
+
+.project-name-content {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.project-day-month {
+  margin-top: 5px;
+  font-size: 0.7rem;
+}
+.project-setting {
+  // flex-direction: column;
+  // display: flex;
+  margin:  auto 0;
+}
+
+
+

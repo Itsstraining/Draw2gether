@@ -26,4 +26,5 @@ import { AuthState } from 'src/states/auth.state';
 })
 export class AppComponent {
   title = 'client';
+  user = false;
 }

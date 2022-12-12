@@ -14,6 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthEffect } from 'src/effects/auth.effect';
 
+
 @NgModule({
   declarations: [
     AppComponent,
