@@ -13,12 +13,12 @@ export class HomeComponent implements OnInit {
 
 
   listJams: Jam[] = [];
+  list: Jam[] = []
 
   ngOnInit(): void {
     // console.log(this.listJams.length)
   }
   addListJam() {
-    console.log(this.listJams.length);
 
     let newJam = {
       id : Date.now(),
@@ -26,12 +26,7 @@ export class HomeComponent implements OnInit {
       createdDate: Date.now(),
       owner: 'Khang'
     }
-    this.listJams.push(
-      newJam
-    );
-    console.log(this.listJams.length);
+    this.listJams.push(newJam);
   }
-
-
 
 }

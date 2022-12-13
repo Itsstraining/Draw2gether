@@ -22,21 +22,17 @@
           </div>
         </div>
       </div>
-      <div class="bottom" *ngIf="listJams.length != 0">
-        <app-jam-ject *ngFor="let jam of listJams" [jamInFor]="jam"></app-jam-ject>
+      <div class="bottom">
 
-        <div class="floating-container">
-          <div class="floating-button">+</div>
+        <div class="bottom-content" *ngIf="listJams.length != 0">
+          <app-jam-ject *ngFor="let jam of listJams" [jamInFor]="jam"></app-jam-ject>
         </div>
-      </div>
 
-      <div class="bottom" *ngIf="listJams.length == 0">
-
-       <div class="content-center">
-        <p>Bạn chưa có tài liệu Jam nào</p>
-        <p>Nhấn vào biểu tượng + để tạo một tài liệu Jam mới</p>
-       </div>
-
+        <div class="content-center" *ngIf="listJams.length == 0">
+          <p>Bạn chưa có tài liệu Jam nào</p>
+          <p>Nhấn vào biểu tượng + để tạo một tài liệu Jam mới</p>
+        </div>
+        
         <div class="floating-container">
           <div class="floating-button" (click)=addListJam()>+</div>
         </div>
