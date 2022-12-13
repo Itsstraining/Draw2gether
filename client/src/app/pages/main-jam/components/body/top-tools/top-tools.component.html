@@ -28,7 +28,7 @@
             <button mat-button [matMenuTriggerFor]="menu" class="back-ground" >Đặt nền</button>
             <mat-menu #menu="matMenu" class="menu-options">
                 <div *ngFor="let ele of background; let i = index">
-                    <button mat-menu-item class="choice" [class.activeBackground]="selectedBackgroundIndex===i" (click)="onFocus(i)">
+                    <button mat-menu-item [class.activeBackground]="selectedBackgroundIndex===i"  class="choice" (click)="onFocus(i)">
                         <img src={{ele}} alt="">
                     </button>
                 </div>

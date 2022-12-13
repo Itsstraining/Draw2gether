@@ -1,13 +1,12 @@
- <div class="home-container">
+ <div  class="home-container">
     <div class="home-container-content">
       <div class="top">
         <div class="top-left">
           <p>Jam Gần Đây</p>
         </div>
         <div class="top-right">
-          <div>
+          <div class="button-share">
             <button>Do mọi người sở hữu</button>
-            <img src="">
           </div>
 
           <div class="home-top-option">
@@ -23,6 +22,20 @@
           </div>
         </div>
       </div>
-      <div class="bottom"></div>
+      <div class="bottom">
+
+        <div class="bottom-content" *ngIf="listJams.length != 0">
+          <app-jam-ject *ngFor="let jam of listJams" [jamInFor]="jam"></app-jam-ject>
+        </div>
+
+        <div class="content-center" *ngIf="listJams.length == 0">
+          <p>Bạn chưa có tài liệu Jam nào</p>
+          <p>Nhấn vào biểu tượng + để tạo một tài liệu Jam mới</p>
+        </div>
+        
+        <div class="floating-container">
+          <div class="floating-button" (click)=addListJam()>+</div>
+        </div>
+      </div>
     </div>
  </div>

@@ -163,23 +163,23 @@
 }
 
 .back-ground:hover{
-    background-color:  rgb(230, 230, 230);
+    background-color:  #F0F0F0;
     color: rgb(146, 146, 146);
     cursor: pointer;
 }
 
 .remove-all:hover{
-    background-color:  rgb(230, 230, 230);
+    background-color: #F0F0F0;
     color: rgb(146, 146, 146);
     cursor: pointer;
 }
 
 .activeBackground{
-    .choice{
-        background-color: white;
-    }
+    // .choice{
+    //     background-color: white;
+    // }
     img{
-        border-color: aqua;
+        border: 2px solid #ffc727 !important;
     }
 }
 
@@ -196,7 +196,8 @@
 .choice img{
     width: 100px;
     height: 40px;
-    border: 1px solid rgb(200, 200, 200);
+    border: 2px solid rgb(235, 235, 235);
+    // border: 10px solid  red;
 }
 
 // .choice{
@@ -214,5 +215,5 @@
 // }
 
 .choice img:hover{
-    border-color: aqua;
+    border-color: #ffc727;
 }

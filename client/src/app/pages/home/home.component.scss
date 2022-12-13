@@ -31,6 +31,21 @@
   justify-content: space-between;
 }
 
+.button-share {
+  display: flex;
+  align-items: center;
+}
+.button-share button {
+  border: 1px solid #fefefe;
+  border-radius: 10px;
+  width: 10rem;
+  height: 3rem;
+}
+.button-share button:hover {
+  cursor: pointer;
+  background-color: rgb(227, 224, 224);
+}
+
 .home-top-option {
   margin: auto 20px;
 }
@@ -97,4 +112,16 @@ p {
     cursor: pointer;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+}
+
+.content-center {
+  margin-top: 100px ;
+  text-align: center;
+  color: rgb(200,200,200);
+}
+
+.bottom-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 10px;
 }

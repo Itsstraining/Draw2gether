@@ -1,3 +1,4 @@
+import { Jam } from './../../models/jam.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,23 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+
+
+  listJams: Jam[] = [];
+  list: Jam[] = []
+
   ngOnInit(): void {
+    // console.log(this.listJams.length)
+  }
+  addListJam() {
+
+    let newJam = {
+      id : Date.now(),
+      title: "Jam-01",
+      createdDate: Date.now(),
+      owner: 'Khang'
+    }
+    this.listJams.push(newJam);
   }
 
 }

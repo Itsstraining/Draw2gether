@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Auth, onAuthStateChanged } from '@angular/fire/auth';
+import { Auth, onAuthStateChanged, User } from '@angular/fire/auth';
 import { Store } from '@ngrx/store';
+import { AuthService } from 'src/app/services/auth.service';
 import { HttpService } from 'src/app/services/http.service';
 import { AuthState } from 'src/states/auth.state';
 
@@ -11,22 +12,13 @@ import { AuthState } from 'src/states/auth.state';
 })
 export class MainJamComponent implements OnInit {
 
+  user?: User | null;
   idToken$ = this.store.select((state) => state.auth.idToken);
-  constructor(auth:Auth, private httpService: HttpService,private store: Store<{auth: AuthState}>){
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        const uid = user.uid;
-        //name = user.displayName,
-
-        // ...
-      } else {
-        // User is signed out
-        // ...
-      }
-    });
-
+  constructor(auth:Auth, private httpService: HttpService,private store: Store<{auth: AuthState}>,authService: AuthService){
+    authService.getAuthState().subscribe((user) => {
+      this.user = user;
+      console.log(user);
+    })
   }
 
   ngOnInit(): void {
