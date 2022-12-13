@@ -9,13 +9,9 @@ import { from } from 'rxjs';
 })
 export class AuthService {
 
-  user?: User | null;
 
   constructor(private auth: Auth, private router: Router) {
-    this.getAuthState().subscribe((value) => {
-      console.log(value);
-      this.user = value;
-    })
+  
   }
 
   getAuthState(){
