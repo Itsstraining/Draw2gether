@@ -3,7 +3,7 @@ import { User } from '@angular/fire/auth';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-home-navbar',
   templateUrl: './home_navbar.component.html',
   styleUrls: ['./home_navbar.component.scss']
 })

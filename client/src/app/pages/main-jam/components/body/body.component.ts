@@ -1,10 +1,10 @@
-import { NavbarComponent } from './../../../../components/navbar/navbar.component';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AuthState } from 'src/states/auth.state';
 import { Observable } from 'rxjs';
 import { idToken } from '@angular/fire/auth';
 import { AuthActions } from 'src/actions/auth.action';
+import { Pen } from 'src/classes/pen.class';
 
 
 @Component({
@@ -15,6 +15,7 @@ import { AuthActions } from 'src/actions/auth.action';
 export class BodyComponent implements OnInit {
 
   idToken$!: Observable<string>;
+  //canvas!: HTMLCanvasElement;
   constructor(private store: Store <{auth: AuthState}>) { 
     this.idToken$ = this.store.select((store) => store.auth.idToken);
     
@@ -26,6 +27,33 @@ export class BodyComponent implements OnInit {
       //console.log(idToken)
    
     })
+
+    let canvas = document.getElementById("jam-board") as HTMLCanvasElement;
+    this.fixCanvasBlurry(canvas);
+    let ctx = canvas.getContext("2d");
+
+    canvas.addEventListener("mousemove", (e) =>{
+      let x = e.offsetX;
+      let y = e.offsetY;
+      // console.log(e.offsetX, e.offsetY);
+      let pen = new Pen({x: x, y: y});
+      pen.draw(ctx);    
+    });
+
+
+
+
+
+
+
+
+    
+  }
+
+  fixCanvasBlurry(canvas: any) {
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = 1000 * dpr;
+    canvas.height = 470 * dpr;
   }
  
 
@@ -64,8 +92,26 @@ export class BodyComponent implements OnInit {
   }
 
 
+  canvas!: HTMLCanvasElement | null;
+  ctx!: any | null;
+  
   logout(){
     this.store.dispatch(AuthActions.logout());
   }
+
+  
+
+  // draw(){
+  //   this.canvas = document.querySelector("canvas");
+  //   this.ctx = this.canvas?.getContext("2d");
+
+  //   const drawing = (e:any| null) => {
+  //     this.ctx.lineTo(e.offSetX, e.offsetY);
+  //     this.ctx.stroke();
+  //   }
+
+  //   this.canvas?.addEventListener("mousemove", drawing);
+  // }
+  
 
 }
